@@ -1,6 +1,6 @@
 [[build]]
 
-    command = "parcel build ./index.hbs && node server.js"
+    command = "npm run build"
 
 [[redirects]]
  from = "/*"
