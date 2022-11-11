@@ -1,0 +1,50 @@
+@use 'src/markup/partials/variables' as v;
+// Google fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+@import '/src/markup/partials/login.scss';
+@import '/src/markup/partials/chat.scss';
+@import '/src/markup/partials/profile.scss';
+
+// normalize
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+.hide {
+  display: none;
+}
+
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+  border-radius: 0;
+}
+
+input {
+  font-family: inherit;
+}
+
+.off{
+  display: none;
+}
+.on{
+  display: block;
+}
+
+.navigation_menu{
+  background-color:v.$contact-bg;
+  height: 50px;
+}
