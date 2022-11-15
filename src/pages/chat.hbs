@@ -57,17 +57,20 @@
         <div class="devider"></div>
         <form id="chat_send_message_form">
             <div class="chat_input">
-                <div class="attach_file">
-                    <img src="/static/icons/attach_file.svg" alt="attach file">
+                <div class="attach_file_wrap">
+                    <label for="attach_file_send" class="attach_file_input__custom">
+                        <img class='attach_file_send_icon' src="/static/icons/attach_file.svg" alt="attach file">
+                    </label>
+                    <input class="attach_file_input__hidden" id="attach_file_send" type="file">
                 </div>
+
                 <div class="input_message_wrap">
                     {{>input class="input_message" type="text" id="input_message" placeholder="Сообщение"}}
                 </div>
-                <div class="send_mesage">
-                    <button class="send_message_btn">
-                        <img src="/static/icons/send.svg" alt="send message">
-                    </button>
-                </div>
+
+                <button class="send_message_btn">
+                    <img src="/static/icons/send.svg" alt="send message">
+                </button>
             </div>
         </form>
     </div>

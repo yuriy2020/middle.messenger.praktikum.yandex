@@ -68,7 +68,6 @@
   float: right;
 }
 
-
 .devider {
   margin: 0 10px;
   height: 1px;
@@ -169,23 +168,36 @@
   }
 }
 
-.attach_file {
-  > img {
-    width: 40px;
+.attach_file_input__hidden {
+  display: none;
+}
+
+.attach_file_input__custom{
+  &:hover{
+    cursor: pointer;
+  }
+  >img{
+    width: 35px;
     rotate: 45deg;
   }
 }
+.attach_file_send_icon{
+  &:hover{
+    transform:scale(1.2)
+  }
+}
 
-.send_mesage {
+.send_message_btn {
   width: 40px;
   height: 40px;
-  > .send_message_btn {
-    background-color: v.$primary-color;
-    border-radius: 50%;
-    height: 100%;
-    > img {
-      width: 30px;
-      filter: invert(99%) sepia(22%) saturate(0%) hue-rotate(46deg) brightness(113%) contrast(100%);
-    }
+  flex: 1 0 auto;
+  background-color: v.$primary-color;
+  border-radius: 50%;
+  &:hover {
+    cursor: pointer;
+  }
+  >img{
+    width: 30px;
+    filter: invert(99%) sepia(22%) saturate(0%) hue-rotate(46deg) brightness(113%) contrast(100%);
   }
 }
