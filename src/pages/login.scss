@@ -1,7 +1,7 @@
 /* === Login page ===  */
 
 // variables
-@use "variables" as v;
+@use '../variables' as v;
 
 .login_wrap {
   height: 100vh;
@@ -76,6 +76,7 @@
 .btn{
   height: 37px;
   border-radius: 8px;
+  border: none;
   margin:4px 0;
   &:hover{
     cursor: pointer;

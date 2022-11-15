@@ -1,5 +1,5 @@
 const toggleElements = ['nav_login', 'nav_register', 'nav_chat', 'nav_profile']
-
+// console.log(document);
 function switchMenu(cls) {
   const visible = document.querySelector(`.nav${cls}`)
 
@@ -15,4 +15,12 @@ function switchMenu(cls) {
     }
   })
 }
+
+const forms = document.querySelectorAll('form')
+forms.forEach((f) => {
+  f.addEventListener('submit', function (e) {
+    e.preventDefault()
+    console.log(e.target)
+  })
+})
 
