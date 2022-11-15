@@ -15,7 +15,9 @@
 body {
   font-family: 'Inter', sans-serif;
 }
-
+input {
+  outline: none;
+}
 textarea:focus,
 input:focus {
   outline: none;
@@ -47,4 +49,10 @@ input {
 .navigation_menu{
   background-color:v.$contact-bg;
   height: 50px;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }

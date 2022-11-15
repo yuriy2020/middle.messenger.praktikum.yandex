@@ -4,86 +4,92 @@
             <img src="/static/icons/back_double_arrow.svg" alt="back">
         </div>
     </div>
-
     {{#each data.profile}}
     <div class="profile">
-        <div class="profile_all_data">
-            <figure class="profile_avatar">
-                <img src={{avatar}} alt="ava">
-            </figure>
-            <div class="profile_name">
-                {{first_name}}
-            </div>
-            <div class="profile_data">
-
-                <div class="profile_data_item">
-                    <span class="profile_data_label">Почта</span>
-                    <span class='profile_field'>
-                        <input class='profile_field__input' type='text' name='email' id='email' placeholder='Email'
-                            value={{email}} />
-                    </span>
+        <form id="profile_form">
+            <div class="profile_all_data">
+                <figure class="profile_avatar">
+                    <img src={{avatar}} alt="ava">
+                </figure>
+                <div class="profile_name">
+                    {{first_name}}
                 </div>
-                <div class="devider"></div>
+                <div class="profile_data">
 
-                <div class="profile_data_item">
-                    <span class="profile_data_label">Логин</span>
-                    <span class='profile_field'>
-                        <input class='profile_field__input' type='text' name='login' id='login' placeholder='Login'
-                            value={{login}} />
-                    </span>
-                </div>
-                <div class="devider"></div>
-
-                <div class="profile_data_item">
-                    <span class="profile_data_label">Имя</span>
-                    <span class='profile_field'>
-                        <input class='profile_field__input' type='text' name='user_name' id='user_name'
-                            placeholder='Имя' value={{first_name}} />
-                    </span>
-                </div>
-                <div class="devider"></div>
-
-                <div class="profile_data_item">
-                    <span class="profile_data_label">Фамилия</span>
-                    <span class='profile_field'>
-                        <input class='profile_field__input' type='text' name='surname' id='surname'
-                            placeholder='Фамилия' value={{secons_name}} />
-                    </span>
-                </div>
-                <div class="devider"></div>
-
-                <div class="profile_data_item">
-                    <span class="profile_data_label">Имя в чате</span>
-                    <span class='profile_field'>
-                        <input class='profile_field__input' type='text' name='nick_name' id='nick_name'
-                            placeholder='Имя в чате' value={{display_name}} />
-                    </span>
-                </div>
-                <div class="devider"></div>
-
-                <div class="profile_data_item">
-                    <span class="profile_data_label">Телефон</span>
-                    <span class='profile_field'>
-                        <input class='profile_field__input' type='text' name='phone' id='phone' placeholder='Телефон'
-                            value={{phone}} />
-                    </span>
-                </div>
-
-            </div>
-
-            {{!-- buttons section --}}
-            <div class="actions_change_data">
-                <div class='text_field buttons_group'>
-                    {{>button label='Изменить данные' cls='btn btn__secondary'}}
+                    <div class="profile_data_item">
+                        <span class="profile_data_label">Почта</span>
+                        <span class='profile_field'>
+                            <input class='profile_field__input' type='text' name='email' id='email' placeholder='Email'
+                                value={{email}} />
+                        </span>
+                    </div>
                     <div class="devider"></div>
-                    {{>button label='Изменить пароль' cls='btn btn__secondary'}}
+
+                    <div class="profile_data_item">
+                        <span class="profile_data_label">Логин</span>
+                        <span class='profile_field'>
+                            <input class='profile_field__input' type='text' name='login' id='login' placeholder='Login'
+                                value={{login}} />
+                        </span>
+                    </div>
                     <div class="devider"></div>
-                    {{>button label='Выйти' cls='btn btn__danger'}}
+
+                    <div class="profile_data_item">
+                        <span class="profile_data_label">Имя</span>
+                        <span class='profile_field'>
+                            <input class='profile_field__input' type='text' name='user_name' id='user_name'
+                                placeholder='Имя' value={{first_name}} />
+                        </span>
+                    </div>
                     <div class="devider"></div>
+
+                    <div class="profile_data_item">
+                        <span class="profile_data_label">Фамилия</span>
+                        <span class='profile_field'>
+                            <input class='profile_field__input' type='text' name='surname' id='surname'
+                                placeholder='Фамилия' value={{secons_name}} />
+                        </span>
+                    </div>
+                    <div class="devider"></div>
+
+                    <div class="profile_data_item">
+                        <span class="profile_data_label">Имя в чате</span>
+                        <span class='profile_field'>
+                            <input class='profile_field__input' type='text' name='nick_name' id='nick_name'
+                                placeholder='Имя в чате' value={{display_name}} />
+                        </span>
+                    </div>
+                    <div class="devider"></div>
+
+                    <div class="profile_data_item">
+                        <span class="profile_data_label">Телефон</span>
+                        <span class='profile_field'>
+                            <input class='profile_field__input' type='text' name='phone' id='phone'
+                                placeholder='Телефон' value={{phone}} />
+                        </span>
+                    </div>
+
+                </div>
+
+                {{!-- buttons section --}}
+                <div class="actions_change_data">
+                    <div class='text_field buttons_group'>
+                        <input class='btn btn__secondary' type='submit' name='profile_change_data'
+                            value='Изменить данные'>
+                        <div class="devider"></div>
+                        <input class='btn btn__secondary' type='submit' name='profile_change_password'
+                            value='Изменить пароль'>
+                        <div class="devider"></div>
+                        <input class='btn btn__danger' type='submit' name='profile_exit' value='Выйти'>
+                        <div class="devider"></div>
+
+                    </div>
                 </div>
             </div>
-        </div>
 
+        </form>
     </div>
     {{/each}}
+
+
 </div>

@@ -2,11 +2,14 @@
     <div class="all_contacts">
 
         <div class="search_field">
-            <input class="search" type="text" id="search_input">
-            <span class="input_icon">
-                <img src="/static/icons/search_icon.svg" alt="search" />
-                Поиск
-            </span>
+            <form id="chat_search_form">
+                {{>input class="search" type="text" name="chat_search_input" id="search_input" }}
+                <span class="input_icon">
+                    <img src="/static/icons/search_icon.svg" alt="search" />
+                    Поиск
+                </span>
+            </form>
+
         </div>
 
         {{#each data.contact_list}}
@@ -37,7 +40,6 @@
                 <button class="header_menu__btn">
                     <img src="/static/icons/more_vert.svg" alt="more" />
                 </button>
-
             </div>
         </div>
         <div class="chat_messages">
@@ -53,18 +55,20 @@
             </div>
         </div>
         <div class="devider"></div>
-        <div class="chat_input">
-            <div class="attach_file">
-                <img src="/static/icons/attach_file.svg" alt="attach file">
+        <form id="chat_send_message_form">
+            <div class="chat_input">
+                <div class="attach_file">
+                    <img src="/static/icons/attach_file.svg" alt="attach file">
+                </div>
+                <div class="input_message_wrap">
+                    {{>input class="input_message" type="text" id="input_message" placeholder="Сообщение"}}
+                </div>
+                <div class="send_mesage">
+                    <button class="send_message_btn">
+                        <img src="/static/icons/send.svg" alt="send message">
+                    </button>
+                </div>
             </div>
-            <div class="input_message_wrap">
-                <input class="input_message" type="text" id="input_message" placeholder="Сообщение">
-            </div>
-            <div class="send_mesage">
-                <button class="send_message_btn">
-                    <img src="/static/icons/send.svg" alt="send message">
-                </button>
-            </div>
-        </div>
+        </form>
     </div>
 </div>

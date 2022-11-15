@@ -1,20 +1,19 @@
-
 <div class='login_wrap'>
-      <div class='login_window'>
-        <div class='login_title'>Регистрация</div>
-
-        {{#each data.registration}}
-        <div class='text_field'>
-          <label class='text_field__label' for={{name}}>{{label}}</label>
-          <input class='text_field__input' type={{type}} name={{name}} id={{id}} placeholder={{placeholder}}>
-          <label class='text_field__label fail_color' for={{name}}>{{fail}}</label>                             
-        </div>
-        {{/each}}
-        
-        <div class='text_field buttons_group'>
-          {{>button label='Регистрация' cls='btn btn__primary'}}
-          {{>button label='Нет аккаунта?' cls='btn btn__secondary'}}
-        </div>
+  <div class='login_window'>
+    <div class='login_title'>Регистрация</div>
+    <form id="register_form">
+      {{#each data.registration}}
+      <div class='text_field'>
+        <label class='text_field__label' for={{name}}>{{label}}</label>
+        <input class='text_field__input' type={{type}} name={{name}} id={{id}} placeholder={{placeholder}}>
+        <label class='text_field__label fail_color' for={{name}}>{{fail}}</label>
       </div>
-    </div>
-    
+      {{/each}}
+
+      <div class='text_field buttons_group'>
+        <input class='btn btn__primary' type='submit' name='login_btn_enter' id='login_btn_enter' value='Регистрация'>
+        <input class='btn btn__secondary' type='submit' name='login_btn_enter' id='login_btn_enter' value='Отмена'>
+      </div>
+    </form>
+  </div>
+</div>
