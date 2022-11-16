@@ -1,0 +1,58 @@
+@use 'src/variables' as v;
+// Google fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+@import '/src/pages/login.scss';
+@import '/src/pages/chat.scss';
+@import '/src/pages/profile.scss';
+
+// normalize
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Inter', sans-serif;
+}
+input {
+  outline: none;
+}
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+.hide {
+  display: none;
+}
+
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+  border-radius: 0;
+}
+
+input {
+  font-family: inherit;
+}
+
+.off{
+  display: none;
+}
+.on{
+  display: block;
+}
+
+.navigation_menu{
+  background-color:v.$contact-bg;
+  height: 50px;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

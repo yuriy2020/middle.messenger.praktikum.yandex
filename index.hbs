@@ -1,0 +1,32 @@
+
+<html lang='en'>
+<head>
+  <meta charset='UTF-8' />
+  <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  <title>Chat</title>
+  <link rel="shortcut icon" href="#">
+  <link rel='stylesheet' href='styles.scss' />
+  <script src="script.js" defer></script>
+
+</head>
+
+<body>
+  <main>
+    <nav class="navigation_menu">
+      <button class="btn btn__secondary btn_login " onclick="switchMenu('_login')">Логин</button>
+      <button class="btn btn__secondary btn_register" onclick="switchMenu('_register')">Регистрация</button>
+      <button class="btn_chat btn btn__secondary" onclick="switchMenu('_chat')">Чат</button>
+      <button class="btn_profile btn btn__secondary" onclick="switchMenu('_profile')">Профиль</button>
+    </nav>
+
+    <div class="nav_login on">{{>login}}</div>
+    <div class="nav_register off"> {{>register}}</div>
+    <div class="nav_chat off"> {{>chat}}</div>
+    <div class="nav_profile off">{{>profile}}</div>
+  </main>
+
+
+</body>
+
+</html>

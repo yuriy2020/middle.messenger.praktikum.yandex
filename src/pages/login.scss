@@ -1,0 +1,101 @@
+/* === Login page ===  */
+
+// variables
+@use '../variables' as v;
+
+.login_wrap {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login_window {
+  display: flex;
+  flex-direction: column;
+  width: 340px;
+  background: v.$white-color;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.14);
+  border-radius: 12px;
+}
+
+.login_title {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+// input form
+
+.text_field {
+  display: flex;
+  flex-direction: column;
+  margin: 0 30px 16px;
+}
+
+/* стили для label */
+.text_field__label {
+  display: block;
+  // margin: 0.25rem 0;
+  font-weight: 500;
+  font-size: 11px;
+  color: v.$label-color;
+}
+.text_field__label.fail_color{
+  color: v.$red-color;
+}
+
+/* стили для input */
+.text_field__input {
+  width: 100%;
+  height: calc(2.25rem + 2px);
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: v.$text-color;
+  background-color: v.$white-color;
+  background-clip: padding-box;
+  border: none;
+  border-bottom: 1px solid v.$primary-color;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  :focus {
+    border: none;
+  }
+}
+
+//  buttons
+.buttons_group{
+  margin-top:50px;
+}
+.btn{
+  height: 37px;
+  border-radius: 8px;
+  border: none;
+  margin:4px 0;
+  &:hover{
+    cursor: pointer;
+   
+  }
+}
+.btn__primary {
+  color: v.$white-color;
+  background-color: v.$primary-color;
+}
+.btn__secondary{
+  color: v.$primary-color;
+  background-color: v.$white-color;
+  &:hover{
+    border-bottom: 1px solid v.$primary-color;
+    background-color: v.$devider-color;
+  }
+}
+.btn__danger{
+  color:v.$red-color;
+  background-color: v.$white-color;
+}

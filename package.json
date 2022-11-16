@@ -1,0 +1,29 @@
+{
+  "name": "messanger",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "parcel build ./index.hbs && node server.js",
+    "dev": "parcel ./index.hbs --port 3000 --no-cache",
+    "build": "parcel build ./index.hbs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": " <Yuri Balalaev yuriy8888@yandex.ru>",
+  "license": "ISC",
+  "devDependencies": {
+    "@anikin/parcel-transformer-handlebars": "^1.0.9",
+    "@anikin/parcel-transformer-handlebars-precompile": "^1.0.1",
+    "@parcel/transformer-sass": "^2.7.0",
+    "parcel": "^2.7.0",
+    "parcel-transformer-hbs": "^1.0.4",
+    "postcss": "^8.4.18",
+    "postcss-nested": "^6.0.0"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "handlebars": "^4.7.7"
+  },
+  "engines": {
+    "node": "v16.13.1"
+  }
+}
