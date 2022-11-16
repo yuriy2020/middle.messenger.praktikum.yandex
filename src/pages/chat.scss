@@ -123,6 +123,9 @@
 
 .header_menu__btn {
   background-color: transparent;
+  &:hover{
+    transform: scale(1.1);
+  }
   > img {
     width: 30px;
   }
