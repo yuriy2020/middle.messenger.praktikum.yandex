@@ -6,6 +6,7 @@
   <meta name='viewport' content='width=device-width, initial-scale=1.0' />
   <title>Chat</title>
   <link rel="shortcut icon" href="#">
+  <link rel='stylesheet' href='clear.scss' />
   <link rel='stylesheet' href='styles.scss' />
   <script src="script.js" defer></script>
 
@@ -20,10 +21,10 @@
       <button class="btn_profile btn btn__secondary" onclick="switchMenu('_profile')">Профиль</button>
     </nav>
 
-    <div class="nav_login on">{{>login}}</div>
-    <div class="nav_register off"> {{>register}}</div>
-    <div class="nav_chat off"> {{>chat}}</div>
-    <div class="nav_profile off">{{>profile}}</div>
+    <div class="page nav_login off">{{>login}}</div>
+    <div class="page nav_register off"> {{>register}}</div>
+    <div class="page nav_chat on"> {{>chat}}</div>
+    <div class="page nav_profile off">{{>profile}}</div>
   </main>
 
 

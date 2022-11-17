@@ -16,6 +16,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  &:hover{
+    cursor: pointer;
+    transform:translateX(5);
+  }
 }
 .back_icon{
   height: 30px;
