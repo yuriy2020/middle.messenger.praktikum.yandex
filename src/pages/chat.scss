@@ -1,4 +1,4 @@
-@use '../variables' as v;
+@use '../../variables' as v;
 
 // chat
 
@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 
 .chat {
@@ -14,6 +14,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 100%;
 }
 
 .avatar {
@@ -123,7 +124,7 @@
 
 .header_menu__btn {
   background-color: transparent;
-  &:hover{
+  &:hover {
     transform: scale(1.1);
   }
   > img {
@@ -131,10 +132,10 @@
   }
 }
 .chat_messages {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
   height: 100%;
+  flex-direction: column-reverse;
+  display: flex;
+  overflow-y: auto;
 }
 .message {
   background-color: v.$contact-bg;
@@ -175,18 +176,18 @@
   display: none;
 }
 
-.attach_file_input__custom{
-  &:hover{
+.attach_file_input__custom {
+  &:hover {
     cursor: pointer;
   }
-  >img{
+  > img {
     width: 35px;
     rotate: 45deg;
   }
 }
-.attach_file_send_icon{
-  &:hover{
-    transform:scale(1.2)
+.attach_file_send_icon {
+  &:hover {
+    transform: scale(1.2);
   }
 }
 
@@ -199,8 +200,21 @@
   &:hover {
     cursor: pointer;
   }
-  >img{
+  > img {
     width: 30px;
     filter: invert(99%) sepia(22%) saturate(0%) hue-rotate(46deg) brightness(113%) contrast(100%);
   }
+}
+
+.all_contacts {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.side_bar {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }

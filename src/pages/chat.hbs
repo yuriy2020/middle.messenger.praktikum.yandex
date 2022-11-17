@@ -1,6 +1,5 @@
 <div class="chat_wrapper">
-    <div class="all_contacts">
-
+    <div class="side_bar">
         <div class="search_field">
             <form id="chat_search_form">
                 {{>input class="search" type="text" name="chat_search_input" id="search_input" }}
@@ -11,22 +10,24 @@
             </form>
 
         </div>
+        <div class="all_contacts">
+            {{#each data.contact_list}}
+            <div class="devider"></div>
+            <div class="contact">
+                <div class="avatar"></div>
+                <div class="user_info">
+                    <div class="user_name">{{user_name}}</div>
+                    <div class="last_message">{{last_message}}</div>
+                </div>
+                <div class="message_info">
+                    <div class="time_info">{{time_last_message}}</div>
+                    <div class="unread_count">{{unread_messagges}}</div>
+                </div>
 
-        {{#each data.contact_list}}
-        <div class="devider"></div>
-        <div class="contact">
-            <div class="avatar"></div>
-            <div class="user_info">
-                <div class="user_name">{{user_name}}</div>
-                <div class="last_message">{{last_message}}</div>
             </div>
-            <div class="message_info">
-                <div class="time_info">{{time_last_message}}</div>
-                <div class="unread_count">{{unread_messagges}}</div>
-            </div>
-
+            {{/each}}
         </div>
-        {{/each}}
+
     </div>
     <div class="chat">
         <div class="chat_header">
@@ -43,16 +44,11 @@
             </div>
         </div>
         <div class="chat_messages">
+            {{#each data.messages}}
             <div class="message">
-                Привет! Смотри, тут всплыл интересный кусок лунной космической истории — НАСА в какой-то момент
-                попросила Хассельблад адаптировать модель SWC для полетов на Луну. Сейчас мы все знаем что астронавты
-                летали с моделью 500 EL — и к слову говоря, все тушки этих камер все еще находятся на поверхности Луны
+                {{this}}
             </div>
-            <div class="message">
-                Привет! Смотри, тут всплыл интересный кусок лунной космической истории — НАСА в какой-то момент
-                попросила Хассельблад адаптировать модель SWC для полетов на Луну. Сейчас мы все знаем что астронавты
-                летали с моделью 500 EL — и к слову говоря, все тушки этих камер все еще находятся на поверхности Луны
-            </div>
+            {{/each}}
         </div>
         <div class="devider"></div>
         <form id="chat_send_message_form">
@@ -65,7 +61,7 @@
                 </div>
 
                 <div class="input_message_wrap">
-                    {{>input class="input_message" type="text" id="input_message" placeholder="Сообщение"}}
+                    {{>input class="input_message" type="text" id="input_message" placeholder="Сообщение" }}
                 </div>
 
                 <button class="send_message_btn">
