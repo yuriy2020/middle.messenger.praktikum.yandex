@@ -1,4 +1,4 @@
-@use '../../variables' as v;
+@use '../variables' as v;
 
 // chat
 
@@ -78,7 +78,6 @@
 // search-field
 
 .search_field {
-  margin: 20px;
   position: relative;
   .search {
     width: 100%;
