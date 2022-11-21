@@ -1,0 +1,12 @@
+{
+  "extends": [
+    "stylelint-config-standard-scss",
+    "stylelint-config-prettier-scss"
+  ],
+  "ignoreFiles": [
+    "node_modules/*",
+    "normalizer.sass",
+    "build/*",
+    "dist/*"
+  ]
+}

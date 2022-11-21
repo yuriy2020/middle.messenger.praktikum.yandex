@@ -1,10 +1,10 @@
-@use 'src/variables' as v;
-// Google fonts
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+@use "src/variables" as v;
 
-@import '/src/pages/login.scss';
-@import '/src/pages/chat.scss';
-@import '/src/pages/profile.scss';
+// Google fonts
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
+@import "/src/pages/login";
+@import "/src/pages/chat";
+@import "/src/pages/profile";
 
 // normalize
 *,
@@ -13,11 +13,11 @@
   box-sizing: border-box;
 }
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 14px;
 }
 
-main{
+main {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -47,25 +47,25 @@ input {
   font-family: inherit;
 }
 
-.off{
+.off {
   display: none;
 }
-.on{
+.on {
   display: block;
 }
 
-.navigation_menu{
-  background-color:v.$contact-bg;
+.navigation_menu {
+  background-color: v.$contact-bg;
   height: 50px;
 }
 
-form{
+form {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.page{
+.page {
   height: 100%;
-  overflow-y:hidden;
+  overflow-y: hidden;
 }

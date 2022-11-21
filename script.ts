@@ -1,8 +1,11 @@
-const toggleElements = ['nav_login', 'nav_register', 'nav_chat', 'nav_profile']
-// console.log(document);
-function switchMenu(cls) {
-  const visible = document.querySelector(`.nav${cls}`)
-  if (!visible) return
+const toggleElements = ['page_login', 'page_register', 'page_chat', 'page_profile']
+
+// eslint-disable-next-line
+function switchMenu(cls: string): void {
+  const visible = document.querySelector(`.page${cls}`)
+  if (!visible) {
+    return
+  }
 
   if (!visible.classList.contains('on')) {
     visible.classList.remove('off')
@@ -11,7 +14,9 @@ function switchMenu(cls) {
   toggleElements.forEach((elem) => {
     if (!elem.includes(cls)) {
       const nonvisible = document.querySelector(`.${elem}`)
-      if (!nonvisible) return
+      if (!nonvisible) {
+        return
+      }
       nonvisible.classList.remove('on')
       nonvisible.classList.add('off')
     }
@@ -20,7 +25,7 @@ function switchMenu(cls) {
 
 const forms = document.querySelectorAll('form')
 forms.forEach((f) => {
-  f.addEventListener('submit', function (e) {
+  f.addEventListener('submit', function(e) {
     e.preventDefault()
     console.log(e.target)
   })

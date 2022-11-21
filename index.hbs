@@ -6,9 +6,9 @@
   <meta name='viewport' content='width=device-width, initial-scale=1.0' />
   <title>Chat</title>
   <link rel="shortcut icon" href="#">
-  <link rel='stylesheet' href='clear.scss' />
+  <link rel='stylesheet' href='/src/normalizer.scss' />
   <link rel='stylesheet' href='styles.scss' />
-  <script src="script.ts" type="module" defer></script>
+  <script src="script.ts" defer></script>
 
 </head>
 
@@ -21,12 +21,11 @@
       <button class="btn_profile btn btn__secondary" onclick="switchMenu('_profile')">Профиль</button>
     </nav>
 
-    <div class="page nav_login off">{{>login}}</div>
-    <div class="page nav_register off"> {{>register}}</div>
-    <div class="page nav_chat on"> {{>chat}}</div>
-    <div class="page nav_profile off">{{>profile}}</div>
+    <div class="page page_login off">{{>login}}</div>
+    <div class="page page_register off"> {{>register}}</div>
+    <div class="page page_chat on"> {{>chat}}</div>
+    <div class="page page_profile off">{{>profile}}</div>
   </main>
-
 
 </body>
 
