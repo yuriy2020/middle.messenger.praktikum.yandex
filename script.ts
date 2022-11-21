@@ -2,6 +2,7 @@ const toggleElements = ['nav_login', 'nav_register', 'nav_chat', 'nav_profile']
 // console.log(document);
 function switchMenu(cls) {
   const visible = document.querySelector(`.nav${cls}`)
+  if (!visible) return
 
   if (!visible.classList.contains('on')) {
     visible.classList.remove('off')
@@ -10,6 +11,7 @@ function switchMenu(cls) {
   toggleElements.forEach((elem) => {
     if (!elem.includes(cls)) {
       const nonvisible = document.querySelector(`.${elem}`)
+      if (!nonvisible) return
       nonvisible.classList.remove('on')
       nonvisible.classList.add('off')
     }
@@ -23,4 +25,3 @@ forms.forEach((f) => {
     console.log(e.target)
   })
 })
-
