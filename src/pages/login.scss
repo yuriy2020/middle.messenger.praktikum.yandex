@@ -1,7 +1,7 @@
 /* === Login page ===  */
 
 // variables
-@use '../variables' as v;
+@use "../variables" as v;
 
 .login_wrap {
   height: 100vh;
@@ -15,7 +15,7 @@
   flex-direction: column;
   width: 340px;
   background: v.$white-color;
-  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.14);
+  box-shadow: 0 0 6px rgb(0 0 0 / 14%);
   border-radius: 12px;
 }
 
@@ -23,7 +23,7 @@
   display: flex;
   justify-content: center;
   margin: 40px 0;
-  font-family: 'Inter';
+  font-family: inherit;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -39,19 +39,19 @@
 }
 
 /* стили для label */
-.text_field__label {
+.text__field_label {
   display: block;
-  // margin: 0.25rem 0;
   font-weight: 500;
   font-size: 11px;
   color: v.$label-color;
 }
-.text_field__label.fail_color{
+
+.text__field_label.fail_color {
   color: v.$red-color;
 }
 
 /* стили для input */
-.text_field__input {
+.text__field_input {
   width: 100%;
   height: calc(2.25rem + 2px);
   font-family: inherit;
@@ -64,38 +64,44 @@
   border: none;
   border-bottom: 1px solid v.$primary-color;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
   :focus {
     border: none;
   }
 }
 
 //  buttons
-.buttons_group{
-  margin-top:50px;
+.buttons_group {
+  margin-top: 50px;
 }
-.btn{
+
+.btn {
   height: 37px;
   border-radius: 8px;
   border: none;
-  margin:4px 0;
-  &:hover{
+  margin: 4px 0;
+
+  &:hover {
     cursor: pointer;
-   
   }
 }
+
 .btn__primary {
   color: v.$white-color;
   background-color: v.$primary-color;
 }
-.btn__secondary{
+
+.btn__secondary {
   color: v.$primary-color;
   background-color: v.$white-color;
-  &:hover{
+
+  &:hover {
     border-bottom: 1px solid v.$primary-color;
     background-color: v.$devider-color;
   }
 }
-.btn__danger{
-  color:v.$red-color;
+
+.btn__danger {
+  color: v.$red-color;
   background-color: v.$white-color;
 }

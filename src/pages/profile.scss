@@ -16,15 +16,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  
   &:hover{
     cursor: pointer;
     transform:translateX(5);
   }
 }
+
 .back_icon{
   height: 30px;
   background-color: v.$primary-color;
   border-radius: 50%;
+
   >img{
     width:30px;
     filter: invert(100%) sepia(0%) saturate(2947%) hue-rotate(62deg) brightness(101%) contrast(104%);
@@ -48,7 +51,6 @@
 }
 
 .profile_avatar{
-
   >img{
     border-radius: 50%;
     object-fit: cover;
@@ -72,7 +74,7 @@
 }
 
 /* стили для input */
-.profile_field__input {
+.profile__field_input {
   width: 100%;
   height: calc(2.25rem + 2px);
   font-family: inherit;
@@ -84,6 +86,7 @@
   background-clip: padding-box;
   border: none;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
   :focus {
     border: none;
   }
@@ -98,6 +101,7 @@
   align-items: center;
   justify-content: space-between;
 }
+
 .devider {
   margin: 0 10px;
   height: 1px;

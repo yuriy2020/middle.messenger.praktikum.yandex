@@ -21,7 +21,7 @@
   margin: 8px;
   min-width: 47px;
   height: 47px;
-  background: #efefef;
+  background: v.$devider-color;
   border-radius: 50%;
 }
 
@@ -75,37 +75,7 @@
   background-color: v.$devider-color;
 }
 
-// search-field
 
-.search_field {
-  position: relative;
-  .search {
-    width: 100%;
-    height: calc(2.25rem + 2px);
-    font-size: 1rem;
-    font-weight: 400;
-    color: v.$text-color;
-    border: none;
-    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    background-color: v.$contact-bg;
-
-    :focus {
-      border: none;
-    }
-  }
-  .input_icon {
-    position: absolute;
-    right: 50%;
-    top: 4px;
-    display: flex;
-    align-items: center;
-
-    img {
-      width: 25px;
-      filter: invert(68%) sepia(0%) saturate(119%) hue-rotate(153deg) brightness(89%) contrast(88%);
-    }
-  }
-}
 
 // chat
 
@@ -114,6 +84,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   > .contact_header {
     display: flex;
 
@@ -121,21 +92,25 @@
   }
 }
 
-.header_menu__btn {
+.header__menu_btn {
   background-color: transparent;
+
   &:hover {
     transform: scale(1.1);
   }
+
   > img {
     width: 30px;
   }
 }
+
 .chat_messages {
   height: 100%;
   flex-direction: column-reverse;
   display: flex;
   overflow-y: auto;
 }
+
 .message {
   background-color: v.$contact-bg;
   padding: 8px;
@@ -154,6 +129,7 @@
 .input_message_wrap {
   margin: 20px;
   width: 100%;
+
   .input_message {
     width: 100%;
     height: calc(2.25rem + 2px);
@@ -164,26 +140,28 @@
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     background-color: v.$contact-bg;
     border-radius: 12px;
-    background-color: v.$contact-bg;
+
     :focus {
       border: none;
     }
   }
 }
 
-.attach_file_input__hidden {
+.attachfile__input_hidden {
   display: none;
 }
 
-.attach_file_input__custom {
+.attachfile__input_custom {
   &:hover {
     cursor: pointer;
   }
+
   > img {
     width: 35px;
     rotate: 45deg;
   }
 }
+
 .attach_file_send_icon {
   &:hover {
     transform: scale(1.2);
@@ -196,9 +174,11 @@
   flex: 1 0 auto;
   background-color: v.$primary-color;
   border-radius: 50%;
+
   &:hover {
     cursor: pointer;
   }
+
   > img {
     width: 30px;
     filter: invert(99%) sepia(22%) saturate(0%) hue-rotate(46deg) brightness(113%) contrast(100%);
@@ -216,4 +196,39 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+}
+
+
+// search-field
+
+.search_field {
+  position: relative;
+
+  .search {
+    width: 100%;
+    height: calc(2.25rem + 2px);
+    font-size: 1rem;
+    font-weight: 400;
+    color: v.$text-color;
+    border: none;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    background-color: v.$contact-bg;
+
+    :focus {
+      border: none;
+    }
+  }
+
+  .input_icon {
+    position: absolute;
+    right: 50%;
+    top: 4px;
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 25px;
+      filter: invert(68%) sepia(0%) saturate(119%) hue-rotate(153deg) brightness(89%) contrast(88%);
+    }
+  }
 }
