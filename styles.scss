@@ -2,9 +2,9 @@
 
 // Google fonts
 @import "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap";
-@import "/src/pages/login";
-@import "/src/pages/chat";
-@import "/src/pages/profile";
+@import "/src/pages/Login/login.scss";
+@import "/src/pages/Chat/chat.scss";
+@import "/src/pages/Profile/profile.scss";
 
 // normalize
 *,

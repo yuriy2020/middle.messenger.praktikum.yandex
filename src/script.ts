@@ -1,3 +1,21 @@
+import { Chat } from './pages/Chat';
+import { Login } from './pages/Login';
+import { Button } from './components/Button';
+
+window.addEventListener('DOMContentLoaded', () => {
+  const root = document.querySelector('#app')!;
+
+  // const chat = new Chat({ title: 'Home page' });
+  const login = new Login({ title: 'Home page' });
+
+  root.append(login.getContent()!);
+
+  login.dispatchComponentDidMount();
+});
+
+
+
+
 const toggleElements = ['page_login', 'page_register', 'page_chat', 'page_profile']
 
 // eslint-disable-next-line
