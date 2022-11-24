@@ -2,18 +2,20 @@ import Block from '../../utils/Block';
 import template from './button.hbs';
 
 interface ButtonProps {
+  class?:string;
   label: string;
-  events: {
-    click: () => void;
+  img?:string;
+  events?: {
+    click?: () => void;
   };
 }
 
 export class Button extends Block {
   constructor(props: ButtonProps) {
-    super('button', props);
+    super(props);
   }
 
   render() {
-    return this.compile(template, this.props);
+    return this.compile(template, {...this.props});
   }
 }
