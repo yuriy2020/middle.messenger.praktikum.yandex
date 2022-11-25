@@ -1,23 +1,14 @@
 <div class='login_wrap'>
   <div class='login_window'>
     <div class='login_title'>Вход</div>
-
     <form id="login_form">
-      <div class='text_field'>
-        <label class='text__field_label' for='login'>Логин</label>
-        <input class='text__field_input' type='text' name='login' id='login' placeholder='Login' />
-        <label class='text__field_label fail_color' for='login'>Неверный логин</label>
+      {{{input}}}
+      {{{password}}}
 
+      <div class='text__field buttons_group'>
+        {{{button}}}
       </div>
-      <div class='text_field'>
-        <label class='text__field_label' for='password'>Пароль</label>
-        <input class='text__field_input' type='password' name='password' id='password' placeholder='password' />
-      </div>
-      <div class='text_field buttons_group'>
-        <input class='btn btn__primary' type='submit' name='login_btn_enter' value='Войти'>    
-      {{!-- {{button csl="btn btn__primary" label="btn__primary" img='/static/icons/send.svg' }} --}}
-      {{{button}}}
-      </div>
+
     </form>
   </div>
 </div>

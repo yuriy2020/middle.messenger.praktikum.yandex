@@ -43,9 +43,9 @@ class Block<P extends Record<string, unknown> = any> {
 
     this.children = children
 
-    this.init()
-
     this.props = this._makePropsProxy(props)
+    
+    this.init()
 
     this.eventBus = () => eventBus
 
