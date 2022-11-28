@@ -7,5 +7,6 @@
   },
   "optimizers": {
     "*.{jpg,jpeg,png}": []
-  }
+  },
+ "reporters":  ["...", "parcel-reporter-static-files-copy"]
 }

@@ -4,7 +4,7 @@
             <img src="/static/icons/back_double_arrow.svg" alt="back">
         </div>
     </div>
-    {{#each data.profile}}
+    
     <div class="profile">
         <form id="profile_form">
             <div class="profile_all_data">
@@ -14,10 +14,10 @@
                 <div class="profile_name">
                     {{first_name}}
                 </div>
-                <div class="profile_data">
-
-                    <div class="profile_data_item">
-                        <span class="profile_data_label">Почта</span>
+                <div class="profile__data">
+                
+                    <div class="profile__data_item">
+                        <span class="profile__data_label">Почта</span>
                         <span class='profile_field'>
                             <input class='profile__field_input' type='text' name='email' id='email' placeholder='Email'
                                 value={{email}} />
@@ -25,8 +25,8 @@
                     </div>
                     <div class="devider"></div>
 
-                    <div class="profile_data_item">
-                        <span class="profile_data_label">Логин</span>
+                    <div class="profile__data_item">
+                        <span class="profile__data_label">Логин</span>
                         <span class='profile_field'>
                             <input class='profile__field_input' type='text' name='login' id='login' placeholder='Login'
                                 value={{login}} />
@@ -34,8 +34,8 @@
                     </div>
                     <div class="devider"></div>
 
-                    <div class="profile_data_item">
-                        <span class="profile_data_label">Имя</span>
+                    <div class="profile__data_item">
+                        <span class="profile__data_label">Имя</span>
                         <span class='profile_field'>
                             <input class='profile__field_input' type='text' name='user_name' id='user_name'
                                 placeholder='Имя' value={{first_name}} />
@@ -43,8 +43,8 @@
                     </div>
                     <div class="devider"></div>
 
-                    <div class="profile_data_item">
-                        <span class="profile_data_label">Фамилия</span>
+                    <div class="profile__data_item">
+                        <span class="profile__data_label">Фамилия</span>
                         <span class='profile_field'>
                             <input class='profile__field_input' type='text' name='surname' id='surname'
                                 placeholder='Фамилия' value={{secons_name}} />
@@ -52,8 +52,8 @@
                     </div>
                     <div class="devider"></div>
 
-                    <div class="profile_data_item">
-                        <span class="profile_data_label">Имя в чате</span>
+                    <div class="profile__data_item">
+                        <span class="profile__data_label">Имя в чате</span>
                         <span class='profile_field'>
                             <input class='profile__field_input' type='text' name='nick_name' id='nick_name'
                                 placeholder='Имя в чате' value={{display_name}} />
@@ -61,8 +61,8 @@
                     </div>
                     <div class="devider"></div>
 
-                    <div class="profile_data_item">
-                        <span class="profile_data_label">Телефон</span>
+                    <div class="profile__data_item">
+                        <span class="profile__data_label">Телефон</span>
                         <span class='profile_field'>
                             <input class='profile__field_input' type='text' name='phone' id='phone'
                                 placeholder='Телефон' value={{phone}} />
@@ -89,7 +89,7 @@
 
         </form>
     </div>
-    {{/each}}
+
 
 
 </div>

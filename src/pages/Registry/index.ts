@@ -18,10 +18,10 @@ export class Registry extends Block {
       type: 'text',
       name: 'mail',
       id: 'mail',
-      placeholder: "example@mail.ru",
-      value: "1",
-      errorText: "",
-      label: "Почта"
+      placeholder: 'example@mail.ru',
+      value: '1',
+      errorText: '',
+      label: 'Почта',
     })
 
     this.children.login = new Input({
@@ -29,10 +29,10 @@ export class Registry extends Block {
       type: 'text',
       name: 'login',
       id: 'login',
-      placeholder: "",
-      value: "2",
-      errorText: "",
-      label: "Логин"
+      placeholder: '',
+      value: '2',
+      errorText: '',
+      label: 'Логин',
     })
 
     this.children.user_name = new Input({
@@ -40,10 +40,10 @@ export class Registry extends Block {
       type: 'text',
       name: 'user_name',
       id: 'user_name',
-      placeholder: "",
-      value: "3",
-      errorText: "",
-      label: "Имя"
+      placeholder: '',
+      value: '3',
+      errorText: '',
+      label: 'Имя',
     })
 
     this.children.user_family = new Input({
@@ -51,10 +51,10 @@ export class Registry extends Block {
       type: 'text',
       name: 'user_family',
       id: 'user_family',
-      placeholder: "",
-      value: "4",
-      errorText: "",
-      label: "Фамилия"
+      placeholder: '',
+      value: '4',
+      errorText: '',
+      label: 'Фамилия',
     })
 
     this.children.phone = new Input({
@@ -62,10 +62,10 @@ export class Registry extends Block {
       type: 'text',
       name: 'phone',
       id: 'phone',
-      placeholder: "",
-      value: "5",
-      errorText: "",
-      label: "Телефон"
+      placeholder: '',
+      value: '5',
+      errorText: '',
+      label: 'Телефон',
     })
 
     this.children.user_pass_1 = new Input({
@@ -73,10 +73,10 @@ export class Registry extends Block {
       type: 'password',
       name: 'user_pass_1',
       id: 'user_pass_1',
-      placeholder: "",
+      placeholder: '',
       // value: "6",
-      errorText: "Неверный пароль",
-      label: "Пароль"
+      errorText: 'Неверный пароль',
+      label: 'Пароль',
     })
 
     this.children.user_pass_2 = new Input({
@@ -84,29 +84,30 @@ export class Registry extends Block {
       type: 'password',
       name: 'user_pass_2',
       id: 'user_pass_2',
-      placeholder: "",
+      placeholder: '',
       // value: "7",
-      errorText: "Неверный пароль",
-      label: "Пароль (еще раз)"
+      errorText: 'Неверный пароль',
+      label: 'Пароль (еще раз)',
     })
 
     this.children.sigh_in = new Button({
       label: 'Регистрация',
       class: 'btn btn__primary',
-      events:{
-        click:()=>{console.log('ok');
-        }
-      }
+      events: {
+        click: () => {
+          console.log('ok')
+        },
+      },
     })
     this.children.cancel = new Button({
       label: 'Отмена',
       class: 'btn btn__danger',
-      events:{
-        click:()=>{console.log('ok');
-        }
-      }
+      events: {
+        click: () => {
+          console.log('ok')
+        },
+      },
     })
-
   }
 
   render() {

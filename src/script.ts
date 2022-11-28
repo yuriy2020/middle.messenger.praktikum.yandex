@@ -3,13 +3,26 @@ import { Button } from './components/Button'
 import { renderDOM } from './utils/renderDOM'
 import { Login } from './pages/Login'
 import { Registry } from './pages/Registry'
+import { Profile } from './pages/Profile'
 
 window.addEventListener('DOMContentLoaded', () => {
 
-  const registry = new Registry()
+  // const registry = new Registry()
   // const login = new Login()
+  
+  const profile = new Profile({
+    id: '636b690ecece9e21f97a035f',
+    avatar: '/static/img/ava.png',
+    first_name: 'Silva',
+    secons_name: 'Morris',
+    email: 'silvamorris@steeltab.com',
+    login: 'Cabrera',
+    display_name: 'Chupakabra',
+    phone: '+7(909)9673030',
+    class:'profile__data'
+  })
 
-  renderDOM('#app', registry)
+  renderDOM('#app', profile)
 
 })
 
