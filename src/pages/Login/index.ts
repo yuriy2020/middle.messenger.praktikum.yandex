@@ -13,7 +13,7 @@ export class Login extends Block {
   }
 
   protected init(): void {
-    this.children.input = new Input({
+    this.children.login = new Input({
       class: 'text__field',
       type: 'text',
       name: 'login',
@@ -35,6 +35,10 @@ export class Login extends Block {
     this.children.button = new Button({
       label: 'Войти',
       class: 'btn btn__primary',
+      events:{
+        click:()=>{console.log('ok');
+        }
+      }
     })
   }
 

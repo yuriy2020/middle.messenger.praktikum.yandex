@@ -1,15 +1,15 @@
 import { Chat } from './pages/Chat'
-import { Login } from './pages/Login'
 import { Button } from './components/Button'
 import { renderDOM } from './utils/renderDOM'
+import { Login } from './pages/Login'
+import { Registry } from './pages/Registry'
 
 window.addEventListener('DOMContentLoaded', () => {
-  // const root = document.querySelector('#app')!
 
-  // const chat = new Chat({ title: 'Home page' });
-  const login = new Login()
+  const registry = new Registry()
+  // const login = new Login()
 
-  renderDOM('#app', login)
+  renderDOM('#app', registry)
 
 })
 

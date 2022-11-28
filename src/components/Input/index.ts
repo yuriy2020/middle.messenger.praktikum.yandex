@@ -9,6 +9,7 @@ interface InputProps {
   placeholder?:string
   errorText?:string
   label?:string
+  value?:string
   events?: {
     onchange?: () => void;
   };

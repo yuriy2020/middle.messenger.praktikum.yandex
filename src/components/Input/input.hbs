@@ -1,6 +1,11 @@
 <div class="{{class}}">
         <label class='{{class}}_label' for={{name}}>{{label}}</label>
-        <input class='{{class}}_input' type={{type}} name={{name}} id={{id}} placeholder={{placeholder}} />
-        
+        <input class='{{class}}_input' {{#if type}}type={{type}}{{/if}}
+         {{#if name }}name={{name}}{{/if}}
+                {{#if id}}id={{id}}{{/if}}
+                {{#if value}}value={{value}}{{/if}}
+
+                 {{#if placeholder}}placeholder={{placeholder}}{{/if}} />
+
         {{#if label}}<label class='{{class}}_label fail_color' for={{name}}>{{errorText}}</label>{{/if}}
 </div>

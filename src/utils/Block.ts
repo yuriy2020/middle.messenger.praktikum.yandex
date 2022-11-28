@@ -44,7 +44,7 @@ class Block<P extends Record<string, unknown> = any> {
     this.children = children
 
     this.props = this._makePropsProxy(props)
-    
+
     this.init()
 
     this.eventBus = () => eventBus
@@ -61,8 +61,8 @@ class Block<P extends Record<string, unknown> = any> {
     Object.entries(childrenAndProps).forEach(([key, value]) => {
       if (value instanceof Block) {
         children[key] = value
-      // } else if (Array.isArray(value) && value.every((v) => v instanceof Block)) {
-      //   children[key]=value
+        // } else if (Array.isArray(value) && value.every((v) => v instanceof Block)) {
+        //   children[key]=value
       } else {
         props[key] = value
       }
@@ -104,7 +104,7 @@ class Block<P extends Record<string, unknown> = any> {
 
   private _init() {
     // this._createResources()
-    // this.init()
+    this.init()
 
     this.eventBus().emit(Block.EVENTS.FLOW_RENDER)
   }
@@ -165,6 +165,13 @@ class Block<P extends Record<string, unknown> = any> {
   protected compile(template: (context: any) => string, context?: any) {
     const contextAndStubs = { ...context }
     Object.entries(this.children).forEach(([name, component]) => {
+
+      // if (Array.isArray(component)) {
+      //   contextAndStubs[name] = component.map((child) => {
+      //     return `<div data-id="${child.id}"></div>`
+      //   })
+      //   return
+      // }
 
       contextAndStubs[name] = `<div data-id="${component.id}"></div>`
     })
